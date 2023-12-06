@@ -1,0 +1,40 @@
+Before submitting this file, make sure that there are no more TODO
+placeholders remaining in the file (and remove this comment too).
+
+Memory Debugging Warmup
+-----------------------
+Q1. What does the yellow background for a test case indicate in the SimpleTest result window?
+A1. leak
+
+Q2. What is the observed consequence of a test that uses `delete` on a memory address that has already been deallocated?
+A2. error is caused because the system doesnt know how to delete deallocated memory.
+
+Q3. On your system, what is the observed consequence of `badDeallocate`? Under what circumstances (if any) did the buggy code trigger an error or crash?
+A3. My system crashed with a message to re run it in debug mode
+
+Q4. How is a segmentation fault presented on your system?
+A4. My system crashed once again with a message to re run it in debug
+
+Sorting Linked Lists
+---------------------
+Q5. The prototype of `runSort` takes a `ListNode*` by reference. Explain why the pointer itself needs to be passed by reference and what the consequence would be if it were not.
+A5. passing ListNode by reference is what allows runSort to update the starting linked list. if it was not ran by reference,
+any changed made to the pointer by the runSort function would not update the linked list.
+
+Q6. Run time trials that confirm that RunSort is O(N^2) in the general case. Report your time trial results.
+A6.
+
+Correct (STUDENT_TEST, line 237) Time linked list runSort
+    Line 250 TIME_OPERATION runSort(listrunSort) (size =    10000) completed in    0.111 secs
+    Line 250 TIME_OPERATION runSort(listrunSort) (size =    20000) completed in    0.553 secs
+    Line 250 TIME_OPERATION runSort(listrunSort) (size =    40000) completed in    3.420 secs
+    Line 250 TIME_OPERATION runSort(listrunSort) (size =    80000) completed in   17.778
+
+Q7. Run time trials that confirm that QuickSort is O(NlogN) in the general case. Report your time trial results.
+A7.
+
+Correct (STUDENT_TEST, line 256) Time linked list quickSort
+Line 269 TIME_OPERATION quickSort(listquickSort) (size =    10000) completed in    0.002 secs
+Line 269 TIME_OPERATION quickSort(listquickSort) (size =    20000) completed in    0.003 secs
+Line 269 TIME_OPERATION quickSort(listquickSort) (size =    40000) completed in    0.007 secs
+Line 269 TIME_OPERATION quickSort(listquickSort) (size =    80000) completed in    0.015 secs

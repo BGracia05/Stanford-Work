@@ -1,0 +1,63 @@
+
+Before submitting this file, make sure that there are no more TODO
+placeholders remaining in the file (and remove this comment too).
+
+Perfect Numbers
+---------------
+
+Q1. Roughly how long did it take your computer to do the search? How many perfect numbers were found and what were they?
+A1. The search took my computer around 8 seconds. The 4 perfect numbers that were found were 6, 28, 496, and 8128
+
+Q2. Make a table of the timing results for `findPerfects` that you observed. (old-school table of text rows and columns is just fine)
+A2.
+size    secs
+15000   0.935
+30000   3.689
+60000   14.458
+120000  57.141
+
+Q3. Does it take the same amount of work to compute `isPerfect` on the number 10 as it does on the number 1000? Why or why not? Does it take the same amount of work for `findPerfects` to search the range of numbers from 1-1000 as it does to search the numbers from 1000-2000? Why or why not?
+A3. No, "isPerfect" will take way longer as the numbers scale due to the fact that there is more steps being ran in order to find said perfect number.
+
+Q4. Extrapolate from the data you gathered and make a prediction: how long will it take `findPerfects` to reach the fifth perfect number?
+A4. 4,324,918.3154 seconds to find the fifth perfect number.
+
+Q5. Do any of the tests still pass even with this broken function? Why or why not?
+A5. The tests still pass. However, the tests didn't give me any perfect numbers due to the fact that there are no negative perfect numbers.
+
+Q6. Explain your testing strategy for `smarterSum` and how you chose your specific test cases that lead you to be confident the function is working correctly.
+A6. For smarter sum, I decided to run almost a similar function to divisorSum, but this time i was sqrting n in order to avoid unneccesary run time. I then ran a student test to show expected values comparing the smarterSum to the divisorSum
+
+Q7. Record your timing results for `findPerfectsSmarter` into a table.
+A7. size    secs
+    15000   0.96
+    30000   3.67
+    60000   14.29
+    120000  56.87
+
+Q8. Make a prediction: how long will `findPerfectsSmarter` take to reach the fifth perfect number?
+A8. 4,302,670.2678 secs
+
+Q9. Explain how you chose your specific test cases and why they lead you to be confident `findNthPerfectEuclid` is working correctly.
+A9. I chose the first 4 perfect numbers to test findNthPerfectEuclid and made sure they were equal to the values in isPerfect. My tests came back accurate which lead me to believe my code is working.
+
+Soundex
+-------
+
+Q10. What is the Soundex code for "Angelou"? What is the code for your own surname?
+A10. The soundex code for Angelou is A524. The code for Gracia (my own surname) is G620
+
+Q11. Before writing any code, brainstorm your plan of attack and sketch how you might decompose the work into smaller tasks. Briefly describe your decomposition strategy.
+A11.
+    1. make a map for the digits and letters associated with the digit
+    2. remove any errors and make letters uppercased
+    3. save the first character and then make the rest into digits according to map
+    4. remove all duplicated numbers and 0s
+    5. make the soundex into 4 digits.
+Q12. Think about one or more examples of a class of names that the Soundex system might not work well for. Explain what this class of names is and why the system might incorrectly group them or mis-categorize one of the names.
+A12. Using my surname as an example, it can be grouped as Garcia aswell. meaning G620 can equal to garcia and gracia
+
+Q13. Suppose you are a software engineer working for the U.S. government. You have been tasked with implementing a system that collects names as part of the Census survey and analyzes these names using a phonetic algorithm. Your boss suggests using Soundex and notes that the algorithm is only expected to work for ASCII-encoded strings, since supporting Unicode would require extra work and time. What would your response be and why? What representational harms might result from building a system that exclusively uses Soundex and/or ASCII?
+A13. I would advise the US government that there are many limitations to the code that might lead to misfunction. For example, the fact that there are no room for accents or similar sounding names.
+
+

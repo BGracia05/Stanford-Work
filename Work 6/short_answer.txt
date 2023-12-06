@@ -1,0 +1,28 @@
+Before submitting this file, make sure that there are no more TODO
+placeholders remaining in the file (and remove this comment too).
+
+Q1. Use the above encoding tree to decode the bit sequence `0101100011`.
+A1. MOONS
+
+Q2. Prepare a table for the above encoding tree that lists each character with its assigned bit sequence.
+Use your table to encode the string `"SONS"`.
+A2.
+S = 011
+N = 01
+M = 010
+O = 1
+011101011
+
+Q3. Flatten the encoding tree above on the right into its sequence of bits and sequence of characters.
+A3. TODO
+
+Q4. Unflatten the sequences `110100100` and `FLERA` to reconstruct the original encoding tree.
+A4. TODO
+
+Q5. Construct a Huffman coding tree for the input `"BOOKKEEPER"`.
+A5. TODO
+
+Q6. Calculate the entropy of your Huffman tree for `"BOOKKEEPER"`.
+Confirm that if you had chosen to break ties in a different manner when constructing the tree,
+this alternate tree has the same entropy as the optimal result.
+A6. TODO
